@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  e2e:
+    working_directory: ~/repo
+    docker:
+      - image: node:12.16.1
+    steps:
+      - attach_workspace:
+          at: .
+      - run: yarn test:e2e
+workflows:
+  version: 2
+  development_workflow:
+    jobs:
+      - e2e
