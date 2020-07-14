@@ -9,7 +9,7 @@ jobs:
           at: .
       - run: ls
       - run: yarn test:e2e
-  aaaaaaaaaa:
+  build:
     working_directory: ~/repo
     docker:
       - image: node:12.16.1
@@ -32,10 +32,7 @@ jobs:
           paths:
             - .
 workflows:
-  version: 2
   dev_workflow:
     jobs:
-      - aaaaaaaaaa
-      - e2e:
-        requires:
-          - aaaaaaaaaa
+      - build
+      - e2e
