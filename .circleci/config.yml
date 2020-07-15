@@ -1,9 +1,14 @@
 version: 2.1
-jobs:
-  e2e:
+executors:
+  frontend:
     working_directory: ~/repo
+    # environment:
+    #   DIST_DIR: public
     docker:
       - image: node:12.16.1
+jobs:
+  e2e:
+    executor: frontend
     steps:
       - attach_workspace:
           at: .
@@ -11,9 +16,7 @@ jobs:
       - run: pwd
       - run: yarn test:e2e
   build:
-    working_directory: ~/repo
-    docker:
-      - image: node:12.16.1
+    executor: frontend
     steps:
       - checkout
       - run: ls
