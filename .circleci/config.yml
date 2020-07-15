@@ -44,6 +44,6 @@ workflows:
       - build_front
       # - e2e
       - e2e:
-        requires:
+          requires:
           - build_front
 
