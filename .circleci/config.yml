@@ -15,8 +15,8 @@ jobs:
       - image: node:12.16.1
     steps:
       - checkout
-      - ls
-      - pwd
+      - run: ls
+      - run: pwd
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
