@@ -5,7 +5,7 @@ executors:
     # environment:
     #   DIST_DIR: public
     docker:
-      - image: node:12.16.1
+    - image: node:12.16.1
 jobs:
   e2e:
     executor: frontend
@@ -42,7 +42,6 @@ workflows:
   dev_workflow:
     jobs:
       - build_front
-      # - e2e
       - e2e:
           requires:
           - build_front
