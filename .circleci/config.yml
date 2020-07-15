@@ -15,6 +15,8 @@ jobs:
       - image: node:12.16.1
     steps:
       - checkout
+      - ls
+      - pwd
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
@@ -32,7 +34,11 @@ jobs:
           paths:
             - .
 workflows:
+  version: 2
   dev_workflow:
     jobs:
       - build
-      - e2e
+      - e2e:
+        requires:
+          - build
+
