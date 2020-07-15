@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: node:12.16.1
     steps:
-      - run: ls
-      - run: pwd
       - attach_workspace:
           at: .
+      - run: ls
+      - run: pwd
       - run: yarn test:e2e
   build:
     working_directory: ~/repo
