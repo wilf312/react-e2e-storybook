@@ -1,1 +1,1 @@
-# react-e2e-storybook
+# react-e2e-storybook [![CircleCI](https://circleci.com/gh/wilf312/react-e2e-storybook.svg?style=svg)](https://circleci.com/gh/wilf312/react-e2e-storybook)
