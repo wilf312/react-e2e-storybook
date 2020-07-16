@@ -1,12 +1,13 @@
 {
   "name": "react-e2e-storybook",
   "scripts": {
-    "test:e2e": "start-server-and-test storybook:ci http://localhost:6006 echo",
     "cypress": "cypress open",
-    "echo": "echo \"aaaaaaaaaaa\"",
-    "storybook": "start-storybook",
-    "storybook:ci": "start-storybook -p 6006 # option docs: https://storybook.js.org/docs/configurations/cli-options/#for-start-storybook"
+    "storybook": "start-storybook -p 6006",
+    "test:e2e": "start-server-and-test storybook:ci http://localhost:6006 cypress:ci",
+    "cypress:ci": "cypress run",
+    "storybook:ci": "start-storybook --ci -p 6006 # option docs: https://storybook.js.org/docs/configurations/cli-options/#for-start-storybook"
   },
+
   "version": "1.0.0",
   "repository": "git@github.com:wilf312/react-e2e-storybook.git",
   "author": "OkadaGenya <g.okada.wilf+github@gmail.com>",

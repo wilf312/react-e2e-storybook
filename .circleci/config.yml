@@ -1,15 +1,48 @@
 version: 2.1
+executors:
+  frontend:
+    working_directory: ~/repo
+    # environment:
+    #   DIST_DIR: public
+    docker:
+    - image: node:12.16.1
 jobs:
   e2e:
-    working_directory: ~/repo
-    docker:
-      - image: node:12.18.2
+    executor: frontend
     steps:
       - attach_workspace:
           at: .
+      - run: ls
+      - run: pwd
       - run: yarn test:e2e
+  build_front:
+    executor: frontend
+    steps:
+      - checkout
+      - run: ls
+      - run: pwd
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - cache-key-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Package and cypress Cache
+          key: cache-key-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/Cypress
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
 workflows:
   version: 2
-  development_workflow:
+  dev_workflow:
     jobs:
-      - e2e
+      - build_front
+      - e2e:
+          requires:
+          - build_front
