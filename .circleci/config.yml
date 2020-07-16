@@ -6,9 +6,15 @@ executors:
     #   DIST_DIR: public
     docker:
     - image: node:12.16.1
+  cypress:
+    docker:
+      - image: cypress/base:10
+    # environment:
+    #   - CYPRESS_CACHE_FOLDER: /tmp/.cache/Cypress
+    #   - IMAGE_NAME: cypress
 jobs:
   e2e:
-    executor: frontend
+    executor: cypress
     steps:
       - attach_workspace:
           at: .
