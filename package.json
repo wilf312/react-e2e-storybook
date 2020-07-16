@@ -12,16 +12,16 @@
   "author": "OkadaGenya <g.okada.wilf+github@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/react": "^5.3.19",
-    "babel-loader": "^8.1.0",
-    "cypress": "^4.10.0",
-    "start-server-and-test": "^1.11.2"
+    "@babel/core": "7.10.4",
+    "@storybook/addon-actions": "5.3.19",
+    "@storybook/addon-knobs": "5.3.19",
+    "@storybook/react": "5.3.19",
+    "babel-loader": "8.1.0",
+    "cypress": "4.10.0",
+    "start-server-and-test": "1.11.2"
   }
 }
