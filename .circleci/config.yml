@@ -3,7 +3,7 @@ jobs:
   e2e:
     working_directory: ~/repo
     docker:
-      - image: node:12.18.2
+      - image: node:12.18.3
     steps:
       - attach_workspace:
           at: .
