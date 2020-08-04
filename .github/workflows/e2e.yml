@@ -3,7 +3,7 @@ name: e2e test
 on: [push]
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
       - name: install
