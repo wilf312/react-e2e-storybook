@@ -18,9 +18,9 @@
   },
   "devDependencies": {
     "@babel/core": "7.11.0",
-    "@storybook/addon-actions": "5.3.19",
-    "@storybook/addon-knobs": "5.3.19",
-    "@storybook/react": "5.3.19",
+    "@storybook/addon-actions": "5.3.21",
+    "@storybook/addon-knobs": "5.3.21",
+    "@storybook/react": "5.3.21",
     "babel-loader": "8.1.0",
     "cypress": "4.11.0",
     "start-server-and-test": "1.11.2"
