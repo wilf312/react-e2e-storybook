@@ -4,8 +4,8 @@
     "cypress": "cypress open",
     "storybook": "start-storybook -p 6006",
     "test:e2e": "start-server-and-test storybook:ci http://localhost:6006 cypress:ci",
-    "cypress:ci": "cypress run",
-    "storybook:ci": "start-storybook --ci -p 6006 # option docs: https://storybook.js.org/docs/configurations/cli-options/#for-start-storybook"
+    "cypress:ci": "cypress run --record --key 875e3e87-42b9-4b04-a599-41db9a517426",
+    "storybook:ci": "start-storybook --ci --quiet -p 6006 # option docs: https://storybook.js.org/docs/configurations/cli-options/#for-start-storybook"
   },
 
   "version": "1.0.0",
