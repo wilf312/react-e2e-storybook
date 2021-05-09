@@ -5,7 +5,7 @@ executors:
     # environment:
     #   DIST_DIR: public
     docker:
-    - image: node:12.19.0
+    - image: node:12.22.1
   cypress:
     docker:
       - image: cypress/base:10
