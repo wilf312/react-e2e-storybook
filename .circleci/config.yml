@@ -8,7 +8,7 @@ executors:
     - image: node:12.19.0
   cypress:
     docker:
-      - image: cypress/base:10
+      - image: cypress/base:16
     # environment:
     #   - CYPRESS_CACHE_FOLDER: /tmp/.cache/Cypress
     #   - IMAGE_NAME: cypress
